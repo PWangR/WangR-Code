@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form đăng nhập</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    h1 {
+        color: rgb(0, 0, 0);
+        position: absolute;
+        top: -80px;
+        padding: 20px;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+    }
+    .box{
+        width: 50%;
+        height: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 20px;
+        margin: 20px 20px;
+        background: 100% ;
+        background-image: url(./Wallpaper\ Anime.jpg);
+        border-radius: 90px;
+        border: 5px solid black;
+    }
+
+    .container {
+        background-color: white;
+        width: 450px;
+        min-height: 300px;
+        padding: 20px;
+        border: 5px solid #003b2b;
+        border-radius: 20px;
+        background-color: ww;
+        color: rgb(0, 0, 0);
+        position: relative;
+    }
+
+    label {
+        width: 100%;
+        line-height: 40px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 7px 10px;
+    }
+
+    .button {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    input {
+        border-radius: 10px;
+    }
+
+    .button button {
+        border-radius: 10px;
+        width: 100px;
+        background-color: aqua;
+    }
+
+    input[type="submit"] {
+        padding: 6px 10px;
+        background-color: aqua;
+    }
+
+    .dangnhap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dnicon {
+        position: absolute;
+        right: 0;
+        padding: 30px;
+    }
+
+    .iconmk {
+        position: absolute;
+        right: 0px;
+        top: 110px;
+        padding: 30px;
+    }
+</style>
+
+<body>
+    <iframe width="560" height="550"  src="https://www.youtube.com/embed/ABvUHh71hcY?si=6H9Ku88Tmgn9iOtC" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="box">
+        <div class="container">
+            <div class="tilte">
+                <h1>ĐĂNG NHẬP</h1>
+            </div>
+    
+            <form onsubmit="return dangKy()">
+                <div class="dangnhap-wrapper">
+                    <label for="username">Tên đăng nhập</label>
+                    <div class="dangnhap">
+                        <input type="text" name="username" id="username" placeholder="Nhập tên đăng nhập của bạn">
+                        <i class='bx bx-face dnicon'></i>
+                    </div>
+                </div>
+    
+                <div class="matkhau-wrapper">
+                    <label for="pass1">Mật khẩu</label>
+                    <input type="password" name="pass1" id="pass1" placeholder="Nhập mật khẩu của bạn">
+                    <div class="button">
+                        <input type="submit" value="ĐĂNG NHẬP">
+                        <button><a href="./formDangKy.html">ĐĂNG KÝ</a></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+ 
+    <script>
+        function dangKy() {
+            var ten = document.getElementById("username").value;
+            var p1 = document.getElementById("pass1").value;
+            if (ten == "") {
+                alert("Vui lòng nhập tên!");
+                return false;
+            }
+            else if (ten.length < 4) {
+                alert("Vui lòng nhập tên đăng nhập tối thiểu 4 ký tự!");
+                return false;
+            }
+            else if (p1 == "") {
+                alert("Vui lòng nhập mật khẩu!");
+                return false;
+            }
+            else if (p1.length < 8) {
+                alert("Vui lòng nhập mật khẩu có ít nhất 8 ký tự!");
+                return false;
+            }
+            else {
+                alert("Đăng ký thành công!");
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>
