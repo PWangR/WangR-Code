@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PROFILE</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0a1931;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 900px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .card {
+            background: #060d1a;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .profile-card {
+            grid-column: span 2;
+            display: flex;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .avatar-box {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 5px solid #1877f2;
+            margin-right: 20px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .facebook {
+            background: #1877f2;
+        }
+
+        .facebook:hover {
+            background: #125ab6;
+            transform: translateY(-3px);
+        }
+
+        .github {
+            background: #0d1117;
+        }
+
+        .github:hover {
+            background: #222;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card profile-card">
+            <div class="avatar-box">
+                <img src="" alt="Ảnh đại diện" class="avatar">
+            </div>
+            <div>
+                <h2>Dương Phú Quảng</h2>
+                <p><strong>Giới tính:</strong> Nam</p>
+                <p><strong>Năm sinh:</strong> 04/10/2004</p>
+                <p><strong>Quê quán:</strong> Quảng Bình, Việt Nam</p>
+                <p><strong>Tình trạng hôn nhân:</strong> Có người yêu</p>
+                <div class="links">
+                    <a href="https://www.facebook.com/Quangr2004" class="facebook">Facebook</a>
+                    <a href="https://github.com/PWangR" class="github">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>About Me</h2>
+            <p>Tôi là một sinh viên khóa 64 học tại Khoa CNTT trường đại học Nha Trang.</p>
+        </div>
+
+        <div class="card">
+            <h2>My Goal this Year</h2>
+            <p>Phát triển bản thân và hoàn thành tốt các mục tiêu đặt ra.</p>
+        </div>
+
+        <div class="card">
+            <h2>Likes</h2>
+            <ul>
+                <li>Chơi game</li>
+                <li>Lắp mô hình</li>
+                <li>Nuôi cá</li>
+                <li>Đi cà phê</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Dislikes</h2>
+            <ul>
+                <li>Tiếng ồn</li>
+                <li>Kẹt xe</li>
+                <li>Nhiều thứ khác</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
